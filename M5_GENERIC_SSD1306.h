@@ -100,7 +100,7 @@ public:
 
       p->bus(b);
       auto cfg = p->config();
-      cfg.offset_rotation = 3;
+      cfg.offset_rotation = 2;
       p->config(cfg);
     }
 
