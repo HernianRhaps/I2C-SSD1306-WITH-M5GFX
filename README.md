@@ -16,8 +16,11 @@ M5_GENERIC_SSD1306 display;
 void setup(void){
 
   display.init();
+  
   display.setTextSize(2);
+  
   display.setRotation(3);
+  
   display.drawString("Hollo, world", 10, 20);
 }
 
