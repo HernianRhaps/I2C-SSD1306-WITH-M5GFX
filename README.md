@@ -1,6 +1,6 @@
 /*
  * ESP32 DevkitC で Stack-chan を作りたかった。
- * そのために M5GFX で市販の廉価で小さい SSD1306 I2C 128x64 (0.96inch) OLED を使いたかったが
+ * そのために M5GFX で市販の廉価で小さい SSD1306 I2C 128x64 (0.96inch) OLED を使おうとしたが
  * 何故か I2C の SSD1306 を M5GFX で使うための情報が見つからないので
  * M5GFX の M5UnitGLASS , M5UnitOLED 等を参考に作ってみた。
  * M5_GENERIC_SSD1306.h を include すれば使えるようになるはず。
