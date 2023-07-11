@@ -1,5 +1,5 @@
 /*
- * M5GFX で SSD1306 の I2C 128x64 (0.96inch) OLED を使えるようにしたい。
+ * M5GFX で SSD1306 I2C 128x64 (0.96inch) OLED を使えるようにしたい。
  * I2CのSSD1306のOLEDをM5GFX で使うための情報が見つからないので
  * M5GFXのM5UnitOLEDなどを参考に作ってみた。
  * 多分まだ不完全
