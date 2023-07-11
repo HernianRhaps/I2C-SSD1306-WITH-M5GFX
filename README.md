@@ -3,10 +3,10 @@
  * M5GFX で市販の廉価で小さい SSD1306 I2C 128x64 (0.96inch) OLED を使おうとしたのですが
  * 何故か I2C の SSD1306 を M5GFX で使うための情報が見つからないので
  * M5GFX の M5UnitGLASS , M5UnitOLED 等を参考に作ってみました。
- * M5_GENERIC_SSD1306.h を include すれば使えるようになるはず。
+ * I2C_SSD1306_WITH_M5GFX.h を include すれば使えるようになります。
  * 多分まだ不完全。
  * 
- * SDA、SCL の pin は codeを見てもらえばわかりますが
+ * SDA、SCL の pin は code を見てもらえばわかりますが
  *　#define GENERIC_SSD1306_SDA 21
  * や
  *  setup(sda,scl,freq ...)
@@ -19,9 +19,9 @@
 
 //--------------------------------
 
-#include "SSD1306_WITH_M5GFX.h"
+#include "I2C_SSD1306_WITH_M5GFX.h"
 
-SSD1306_WITH_M5GFX display; 
+I2C_SSD1306_WITH_M5GFX display;
 
 void setup(void){
 
