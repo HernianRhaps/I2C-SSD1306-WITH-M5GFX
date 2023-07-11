@@ -17,13 +17,12 @@ void setup(void){
 
   display.init();
   
-  display.setTextSize(2);
+  display.setTextSize(1.2);
   
-  display.setRotation(3);
-  
-  display.drawString("Hollo, world", 10, 20);
+  display.drawString("Hello, World!", 0, 20); 
 }
 
-void loop(){
+void loop(void)
+{
 
 }
