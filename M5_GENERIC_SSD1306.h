@@ -32,7 +32,6 @@ public:
 
   config_t config(void) const { return config_t(); }
 
-  /*ここは通ってない様子*/
   M5_GENERIC_SSD1306 (const config_t &cfg)
   {
     uint8_t pin_sda = cfg.pin_sda < GPIO_NUM_MAX ? cfg.pin_sda : GENERIC_SSD1306_SDA;
@@ -40,23 +39,20 @@ public:
     setup(pin_sda, pin_scl, cfg.i2c_freq, cfg.i2c_port, cfg.i2c_addr);
   }
 
-  /* M5_GENERIC_SSD1306 display; でインスタンスを生成する時はこのメソッドを用いている */
   M5_GENERIC_SSD1306 (uint8_t pin_sda = GENERIC_SSD1306_SDA, uint8_t pin_scl = GENERIC_SSD1306_SCL, uint32_t i2c_freq = GENERIC_SSD1306_FREQ, int8_t i2c_port = -1, uint8_t i2c_addr = GENERIC_SSD1306_ADDR)
   {
     setup(pin_sda, pin_scl, i2c_freq, i2c_port, i2c_addr);
     
   }
 
-  /* display.init()の際にここは通っていないらしい*/
   using lgfx::LGFX_Device::init;
   bool init(uint8_t pin_sda, uint8_t pin_scl, uint32_t i2c_freq = GENERIC_SSD1306_FREQ, int8_t i2c_port = -1, uint8_t i2c_addr = GENERIC_SSD1306_ADDR)
   {
-
     setup(pin_sda, pin_scl, i2c_freq, i2c_port, i2c_addr);
     return init();
   }
 
-  /* ここは通っている*/
+
   void setup(uint8_t pin_sda = GENERIC_SSD1306_SDA, uint8_t pin_scl = GENERIC_SSD1306_SCL, uint32_t i2c_freq = GENERIC_SSD1306_FREQ, int8_t i2c_port = -1, uint8_t i2c_addr = GENERIC_SSD1306_ADDR)
   {
     //_board = lgfx::board_t::board_M5UnitGLASS;
